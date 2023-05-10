@@ -15,7 +15,10 @@ namespace NS_PersonEmployee
     // default constructor
     Person::Person() : name(""), personalEmail(""), cntPlaces(10)
     {
+        // Dynamically allocate an array of strings with size cntPlaces
         placesVisited = new string[cntPlaces];
+
+        // Initialize each element of the array with "unknown"
         for (int i = 0; i < cntPlaces; i++)
         {
             placesVisited[i] = "unknown";
